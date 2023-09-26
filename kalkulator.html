@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <input type="text" id="display" value="0">
+  <br>
+  <button onclick="add(1)">1</button>
+  <button onclick="add(2)">2</button>
+  <button onclick="add(3)">3</button>
+  <br>
+  <button onclick="add(4)">4</button>
+  <button onclick="add(5)">5</button>
+  <button onclick="add(6)">6</button>
+  <br>
+  <button onclick="add(7)">7</button>
+  <button onclick="add(8)">8</button>
+  <button onclick="add(9)">9</button>
+  <br>
+  <button onclick="add(0)">0</button>
+  <button onclick="add('.')">.</button>
+  <button onclick="equals()">=</button>
+  <br>
+  <button onclick="clear()">C</button>
+
+  <script>
+    var display = document.getElementById("display");
+
+    function add(n) {
+      display.value += n;
+    }
+
+    function equals() {
+      display.value = eval(display.value);
+    }
+
+    function clear() {
+      display.value = "0";
+    }
+  </script>
+</body>
+</html>
